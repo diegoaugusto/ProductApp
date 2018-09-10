@@ -3,6 +3,7 @@ com/diaudrimes/productapp/api/serializers/EntitySerializer.class
 com/diaudrimes/productapp/services/AbstractService.class
 com/diaudrimes/productapp/api/controllers/ResourceController.class
 com/diaudrimes/productapp/persistence/entities/Entity.class
+com/diaudrimes/productapp/api/serializers/ProductSerializer$1.class
 com/diaudrimes/productapp/api/controllers/ProductController.class
 com/diaudrimes/productapp/services/LogService.class
 com/diaudrimes/productapp/persistence/repositories/ProductRepository.class

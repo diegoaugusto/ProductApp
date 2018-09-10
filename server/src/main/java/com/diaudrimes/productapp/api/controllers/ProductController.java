@@ -40,8 +40,6 @@ public class ProductController extends ResourceController {
     this.productService = productService;
   }
 
-
-
   @Autowired
   private ProductSerializer serializer;;
 
@@ -50,7 +48,6 @@ public class ProductController extends ResourceController {
    *
    * @return All products in the system.
    */
-  @CrossOrigin
   @GetMapping(path = "", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
   public @ResponseBody Iterable<Product> getAllProducts() {
     this.getLogService().info(this.getClass(), "Returning all Products.");
@@ -64,7 +61,6 @@ public class ProductController extends ResourceController {
    * @param productId
    * @return
    */
-  @CrossOrigin
   @GetMapping(path = "/{productId}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
   public @ResponseBody Product getProductById(@PathVariable Long productId) {
     // This returns a JSON or XML with the products
@@ -85,7 +81,6 @@ public class ProductController extends ResourceController {
    * @return
    * @throws EntityValidationException
    */
-  @CrossOrigin
   @PostMapping(path = "", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
   public @ResponseBody Product addNewProduct(@RequestBody String productEntity) throws EntityValidationException {
     JsonObject requestBody = (JsonObject) new JsonParser().parse(productEntity);
@@ -105,7 +100,6 @@ public class ProductController extends ResourceController {
    * @return
    * @throws EntityValidationException
    */
-  @CrossOrigin
   @PatchMapping(path = "/{productId}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
   public @ResponseBody Product updateProduct(@PathVariable Long productId,
       @RequestBody String productEntity) throws EntityValidationException {
@@ -127,7 +121,6 @@ public class ProductController extends ResourceController {
    * @param productId
    * @return
    */
-  @CrossOrigin
   @DeleteMapping(path = "/{productId}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
   public @ResponseBody Boolean deleteProduct(@PathVariable Long productId) {
     this.getLogService().info(this.getClass(), "Deleting Product of id [" + productId + "].");
