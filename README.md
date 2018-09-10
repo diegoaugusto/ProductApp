@@ -4,6 +4,7 @@ This repository is the home of the development of a basic set of services to man
 - [Quick Start](#quick-start)
 - [Long Start](#long-start)
 - [Architecture](#architecture)
+- [Tutorial](#tutorial)
 - [Enhancements](#enhancements)
 
 ## Quick Start
@@ -27,13 +28,13 @@ In order to run this project locally, it is necessary to download some tools (if
 These set of tools were used during the development of this project and are the recommended tools. 
 Other versions or different tools that do the same job were not tested and therefore may or may not not work properly. Feel free to try it and provide your feedback.
 
-**-** | **Selected Option** | **Why it is used in this project?**
------------- | ------------- | -------------
-OS | MacOs | Dev's machine.
-Java :coffee: | Oracle 1.8.0_171 | Default version used in the system because of other softwares that depends of version 8.
-MySQL | MySQL 8.0.12 | Latest version installed from HomeBrew.
-Build Automation | Apache Maven 3.5.2 | Easy to use and widely used.  
-IDE | Eclipse Oxygen.3a Release (4.7.3a) | Used to it.
+**-** | **Selected Option**
+------------ | ------------- 
+OS | MacOs
+Java :coffee: | Oracle 1.8.0_171
+MySQL | MySQL 8.0.12
+Build Automation | Apache Maven 3.5.2  
+IDE | Eclipse Oxygen.3a Release (4.7.3a)
 
 ### Steps
 - Follow the same configuration for the database as mentioned in the [Quick start section](#quick-start).
@@ -78,4 +79,3 @@ There is a list of enhancements (TODOs) planned for this project:
 
 - Decrease size of the package (remove files that are not needed to be on Git)
 - Improve unit test coverage
-- Create swagger documentation for API
