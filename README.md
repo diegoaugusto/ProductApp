@@ -1,6 +1,10 @@
 # ProductApp
 This repository is the home of the development of a basic set of services to manage Products with the goal of practicing the use of different technologies like Spring Boot, Angular and others.
 
+- [Quick Start](#quick-start)
+- [Long Start](#long-start)
+- [Architecture](#architecture)
+
 ## Quick Start
 - Make sure you have MySQL up and running on port `3306` and:
     - Database is created: ``CREATE DATABASE `productdb` DEFAULT CHARACTER SET utf8 ;``
@@ -15,7 +19,7 @@ This repository is the home of the development of a basic set of services to man
 - `java -jar server/target/ProductApp-server-0.0.1-SNAPSHOT.jar`
 - Access http://localhost:8080
 
-## Longer Start
+## Long Start
 In order to run this project locally, it is necessary to download some tools (if you don't have them already) and proceed with the steps below.
 
 ### Tools
@@ -39,3 +43,5 @@ IDE | Eclipse Oxygen.3a Release (4.7.3a) | Used to it.
 - Access http://localhost:8080
 
 In these steps, you will download the project, build it and run it.
+
+## Architecture

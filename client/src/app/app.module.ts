@@ -10,22 +10,20 @@ import { AppComponent } from './app.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductsComponent } from './products/products.component';
 import { MessagesComponent } from './messages/messages.component';
-import { ManageProductComponent } from './manage-product/manage-product.component';
 
 @NgModule({
   imports: [
+    RouterModule,
+    AppRoutingModule,
     BrowserModule,
     FormsModule,
-    AppRoutingModule,
-    HttpClientModule,
-    RouterModule
+    HttpClientModule
   ],
   declarations: [
     AppComponent,
     ProductsComponent,
     ProductDetailComponent,
-    MessagesComponent,
-    ManageProductComponent
+    MessagesComponent
   ],
   bootstrap: [ AppComponent ]
 })
