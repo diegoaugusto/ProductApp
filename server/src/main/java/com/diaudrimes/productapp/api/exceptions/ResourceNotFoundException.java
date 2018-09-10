@@ -14,9 +14,9 @@ public class ResourceNotFoundException extends RuntimeException {
 	public ResourceNotFoundException(String message) {
 		super(message);
 	}
-	
+
 	/**
-	 * Contructor 
+	 * Contructor
 	 * @param message the message of the exception
 	 * @param innerException Inner exception
 	 */

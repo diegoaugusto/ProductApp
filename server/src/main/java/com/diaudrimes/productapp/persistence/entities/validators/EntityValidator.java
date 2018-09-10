@@ -1,6 +1,7 @@
 package com.diaudrimes.productapp.persistence.entities.validators;
 
 import java.util.List;
+
 import com.diaudrimes.productapp.persistence.entities.Entity;
 import com.diaudrimes.productapp.persistence.entities.validators.exceptions.EntityValidationException;
 
@@ -15,6 +16,6 @@ import com.diaudrimes.productapp.persistence.entities.validators.exceptions.Enti
  */
 public interface EntityValidator<T extends Entity<IDType>, IDType> {
 
-  public List<String> validate(T entity)
-      throws EntityValidationException;
+	public List<String> validate(T entity)
+			throws EntityValidationException;
 }

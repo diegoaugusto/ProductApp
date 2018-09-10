@@ -19,20 +19,20 @@ public class RestResponseEntityExceptionHandler extends BaseResponseEntityExcept
 	public RestResponseEntityExceptionHandler(LogService logService) {
 		super(logService);
 	}
-	
+
 	@ExceptionHandler(value = {EntityValidationException.class})
 	public ResponseEntity<Object> handleEntityValidationException(EntityValidationException ex, WebRequest request) {
 		StringBuilder errorMessage = new StringBuilder(ex.getMessage());
-		
+
 		if (ex.getValidationMessages() != null && ex.getValidationMessages().size() > 0) {
 			errorMessage.append("\n");
 			for (String m : ex.getValidationMessages()) {
 				errorMessage.append("\n").append(m);
 			}
 		}
-		
+
 		this.logService.error(RestResponseEntityExceptionHandler.class, errorMessage.toString(), ex);
-		
+
 		HttpStatus status = HttpStatus.BAD_REQUEST;
 		ErrorDTO error = new ErrorDTO(status.value(), errorMessage.toString());
 		return this.handleExceptionInternal(ex, error, new HttpHeaders(), status, request);

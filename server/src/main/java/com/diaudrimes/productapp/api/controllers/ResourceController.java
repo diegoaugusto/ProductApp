@@ -1,6 +1,7 @@
 package com.diaudrimes.productapp.api.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import com.diaudrimes.productapp.services.LogService;
 
 /**
@@ -11,17 +12,17 @@ import com.diaudrimes.productapp.services.LogService;
  */
 public abstract class ResourceController {
 
-  public ResourceController(@Autowired LogService logService) {
-    this.logService = logService;
-  }
+	public ResourceController(@Autowired LogService logService) {
+		this.logService = logService;
+	}
 
-  LogService logService;
+	LogService logService;
 
-  /**
-   * Get the instance of the {@link LogService}
-   * @return an instance of the {@link LogService}
-   */
-  protected LogService getLogService() {
-    return this.logService;
-  }
+	/**
+	 * Get the instance of the {@link LogService}
+	 * @return an instance of the {@link LogService}
+	 */
+	protected LogService getLogService() {
+		return this.logService;
+	}
 }
