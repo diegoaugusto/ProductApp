@@ -4,6 +4,7 @@ This repository is the home of the development of a basic set of services to man
 - [Quick Start](#quick-start)
 - [Long Start](#long-start)
 - [Architecture](#architecture)
+- [Enhancements](#enhancements)
 
 ## Quick Start
 - Make sure you have MySQL up and running on port `3306` and:
@@ -26,7 +27,7 @@ In order to run this project locally, it is necessary to download some tools (if
 These set of tools were used during the development of this project and are the recommended tools. 
 Other versions or different tools that do the same job were not tested and therefore may or may not not work properly. Feel free to try it and provide your feedback.
 
-**Tool** | **Selected Option** | **Why it is used in this project?**
+**-** | **Selected Option** | **Why it is used in this project?**
 ------------ | ------------- | -------------
 OS | MacOs | Dev's machine.
 Java :coffee: | Oracle 1.8.0_171 | Default version used in the system because of other softwares that depends of version 8.
@@ -49,3 +50,18 @@ The application is composed by two modules:
 
 - Client: Angular 6 project composed by components used to show the product list, create new products, show the details of a product and it contains operations to delete and edit existing products.
 - Server: Spring Boot application created to provide the REST services used by the client module.
+
+## Tutorial
+After accessing http://localhost:8080, you will see the following screen:
+![Initial Screen](./images/1-init.png)
+
+Then, you can start adding products to the list. For that, you will need to provide the product name and quantity.
+![Add Product](./images/2-addProduct.png)
+
+## Enhancements
+There is a list of enhancements planned for this project.
+
+- Decrease size of the package (remove files that are not needed to be on Git)
+- Improve unit test coverage
+- Create swagger documentation for API
+- Add tutorial to the README file
