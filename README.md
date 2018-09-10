@@ -58,6 +58,18 @@ After accessing http://localhost:8080, you will see the following screen:
 Then, you can start adding products to the list. For that, you will need to provide the product name and quantity.
 ![Add Product](./images/2-addProduct.png)
 
+You can also edit existing products by clicking the eye icon in the product list.
+![Edit Product](./images/3-edit.png)
+
+While you edit the product name, you will see it changing the header of this page too.
+![Edited Product](./images/4-editted.png)
+
+After saving the edited product, you will be redirected to the page showing the list of products.
+![Edited Product list](./images/5-edittedList.png)
+
+If you press the trash icon, the product will be deleted.
+![Delete Product](./images/6-deleted.png)
+
 ## Enhancements
 There is a list of enhancements planned for this project.
 
