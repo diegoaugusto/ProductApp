@@ -3,7 +3,7 @@ This repository is the home of the development of a basic set of services to man
 
 ## Quick Start
 - Make sure you have MySQL up and running on port `3306` and:
-    - Database is created: `CREATE DATABASE ``productdb`` DEFAULT CHARACTER SET utf8 ;`
+    - Database is created: ``CREATE DATABASE `productdb` DEFAULT CHARACTER SET utf8 ;``
     - User `springuser` with password `springuser` exist.
     - You can following the steps below to create the database and configure the user.
     ```
