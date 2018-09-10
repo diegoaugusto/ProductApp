@@ -1,40 +1,43 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { FormsModule } from '@angular/forms';
 
-import { Product } from '../product';
+import { ProductDetailComponent } from './product-detail.component';
+import { MessagesComponent } from '../messages/messages.component';
+
 import { ProductService } from '../product.service';
+import { MessageService } from '../message.service';
 
-@Component({
-  selector: 'app-product-detail',
-  templateUrl: './product-detail.component.html',
-  styleUrls: [ './product-detail.component.css' ]
-})
-export class ProductDetailComponent implements OnInit {
-  @Input() product: Product;
+describe('ProductDetailComponent', () => {
+  let component: ProductDetailComponent;
+  let fixture: ComponentFixture<ProductDetailComponent>;
 
-  constructor(
-    private route: ActivatedRoute,
-    private productService: ProductService,
-    private location: Location
-  ) {}
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [
+      ProductDetailComponent
+    ],
+    imports: [
+      FormsModule,
+      RouterTestingModule.withRoutes([]),
+      HttpClientTestingModule
+    ],
+    providers: [
+      ProductService,
+      MessageService
+    ]
+    })
+    .compileComponents();
+  }));
 
-  ngOnInit(): void {
-    this.getProduct();
-  }
+  beforeEach(() => {
+    fixture = TestBed.createComponent(ProductDetailComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-  getProduct(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.productService.getProduct(id)
-      .subscribe(product => this.product = product);
-  }
-
-  goBack(): void {
-    this.location.back();
-  }
-
- save(): void {
-    this.productService.updateProduct(this.product)
-      .subscribe(() => this.goBack());
-  }
-}
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

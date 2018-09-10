@@ -49,7 +49,7 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('A Great App for Products');
   }));
 
-  it('should render title in a h1 tag', async(() => {
+  it('should render title in a <a> tag with class navbar-brand', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
