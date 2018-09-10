@@ -51,7 +51,8 @@ The application is composed by two modules:
 - Client: Angular 6 project composed by components used to show the product list, create new products, show the details of a product and it contains operations to delete and edit existing products.
 - Server: Spring Boot application created to provide the REST services used by the client module.
 
-Access the [Products API](ProductsApi.md) to see examples of how it works.
+
+Access the [Products API](ProductsApi.md) to see examples of how it works. This Products API documentation has been automatically generated with the Swagger Editor. In order to see a more appealing and usable documentation about the API, load the [products-service-swagger.yaml](./server/api/products-service-swagger.yaml) file in [https://editor.swagger.io](https://editor.swagger.io). 
 
 ## Tutorial
 After accessing http://localhost:8080, you will see the following screen:
