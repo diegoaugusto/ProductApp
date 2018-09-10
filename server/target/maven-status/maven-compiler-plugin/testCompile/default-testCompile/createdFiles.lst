@@ -1,4 +1,3 @@
 com/diaudrimes/productapp/services/ProductServiceTest.class
-com/diaudrimes/productapp/persistence/repositories/ProductRepositoryTest.class
 com/diaudrimes/productapp/ProductAppApplicationTests.class
 com/diaudrimes/productapp/api/ProductControllerTest.class
