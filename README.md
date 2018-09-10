@@ -71,9 +71,8 @@ If you press the trash icon, the product will be deleted.
 ![Delete Product](./images/6-deleted.png)
 
 ## Enhancements
-There is a list of enhancements planned for this project.
+There is a list of enhancements (TODOs) planned for this project:
 
 - Decrease size of the package (remove files that are not needed to be on Git)
 - Improve unit test coverage
 - Create swagger documentation for API
-- Add tutorial to the README file
