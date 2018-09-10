@@ -45,3 +45,7 @@ IDE | Eclipse Oxygen.3a Release (4.7.3a) | Used to it.
 In these steps, you will download the project, build it and run it.
 
 ## Architecture
+The application is composed by two modules:
+
+- Client: Angular 6 project composed by components used to show the product list, create new products, show the details of a product and it contains operations to delete and edit existing products.
+- Server: Spring Boot application created to provide the REST services used by the client module.
