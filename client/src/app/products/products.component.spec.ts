@@ -10,34 +10,40 @@ import { ProductService } from '../product.service';
 import { MessageService } from '../message.service';
 
 describe('ProductsComponent', () => {
-  let component: ProductsComponent;
-  let fixture: ComponentFixture<ProductsComponent>;
+    let component: ProductsComponent;
+    let fixture: ComponentFixture<ProductsComponent>;
 
-  beforeEach(async(() => {
-  TestBed.configureTestingModule({
-    declarations: [
-      ProductsComponent
-    ],
-    imports: [
-      FormsModule,
-      RouterTestingModule.withRoutes([]),
-      HttpClientTestingModule
-    ],
-    providers: [
-      ProductService,
-      MessageService
-    ]
-  })
-  .compileComponents();
-}));
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [
+                ProductsComponent
+            ],
+            imports: [
+                FormsModule,
+                RouterTestingModule.withRoutes([]),
+                HttpClientTestingModule
+            ],
+            providers: [
+                ProductService,
+                MessageService
+            ]
+        })
+            .compileComponents();
+    }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(ProductsComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    beforeEach(() => {
+        fixture = TestBed.createComponent(ProductsComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
+
+    it(`should have as page header, "Create new product"`, async(() => {
+        fixture = TestBed.createComponent(ProductsComponent);
+        const compiled = fixture.debugElement.nativeElement;
+        expect(compiled.querySelector('.page-header').textContent).toContain('Create new product');
+    }));
 });
