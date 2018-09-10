@@ -7,9 +7,9 @@ This repository is the home of the development of a basic set of services to man
     - User `springuser` with password `springuser` exist.
     - You can following the steps below to create the database and configure the user.
     ```
-        mysql> create database productdb; -- Create the new database
-        mysql> create user 'springuser'@'localhost' identified by 'springuser'; -- Creates the user
-        mysql> grant all on productdb.* to 'springuser'@'localhost'; -- Gives all the privileges to the new user on the newly created database
+        mysql> create database productdb;
+        mysql> create user 'springuser'@'localhost' identified by 'springuser';
+        mysql> grant all on productdb.* to 'springuser'@'localhost';
     ```
 - `git clone https://github.com/diegoaugusto/ProductApp.git`
 - `java -jar server/target/ProductApp-server-0.0.1-SNAPSHOT.jar`
@@ -31,4 +31,11 @@ Build Automation | Apache Maven 3.5.2 | Easy to use and widely used.
 IDE | Eclipse Oxygen.3a Release (4.7.3a) | Used to it.
 
 ### Steps
-- 
+- Follow the same configuration for the database as mentioned in the [Quick start section](#quick-start).
+- `git clone https://github.com/diegoaugusto/ProductApp.git`
+- `cd ProductApp`
+- `./mvnw clean install`
+- `java -jar server/target/ProductApp-server-0.0.1-SNAPSHOT.jar`
+- Access http://localhost:8080
+
+In these steps, you will download the project, build it and run it.
